@@ -126,7 +126,7 @@ export default function HeroSection({ signedIn }: { signedIn: boolean }) {
             variants={FADE_DOWN_ANIMATION_VARIANTS}
             style={{
               lineHeight: "1.2",
-              fontSize: "clamp(0.8rem, 2.8vw, 1.6rem)", // Adjust the values according to your design
+              fontSize: "clamp(1rem, 2.8vw, 1.6rem)", // Adjust the values according to your design
             }}
             className="leading-8 mt-5   "
           >
