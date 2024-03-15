@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/ui/navbar";
 import Background from "./components/section/herosection/background";
-import Head  from "next/head";
+import Head from "next/head";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,9 +12,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Shopwise",
-  description:
-    "Set price alerts to your bucket list and buy them at the right time",
+  title: "Cally",
+  description: "AI powered calendar. 10X your productivty",
 };
 
 export default function RootLayout({
@@ -48,7 +47,7 @@ export default function RootLayout({
           />
           <link rel="canonical" href="http://www.geekydan.dev/" />
         </Head>
-          <Header />
+        <Header />
         {children}
       </body>
     </html>
