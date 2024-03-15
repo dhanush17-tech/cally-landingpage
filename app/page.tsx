@@ -5,6 +5,7 @@ import Background from "./components/section/herosection/background";
 import { ContainerScroll } from "./components/section/herosection/mockup";
 import { useMotionValue, useTransform } from "framer-motion";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const scrollY = useMotionValue(0); // MotionValue for scroll position
@@ -29,10 +30,13 @@ export default function Home() {
   const translateY = useTransform(scrollY, [0, 200], ["40%", "0%"]);
 
   return (
-    <main className="flex w-screen overflow-auto flex-col items-center justify-center bg overflow-x-hidden bg-radial-gradient ">
-      {" "}
-      <Background /> <Background />
-      <HeroSection signedIn={false} />
-    </main>
+    <>
+      <main className="flex w-screen overflow-auto flex-col items-center justify-center bg overflow-x-hidden bg-radial-gradient ">
+        {" "}
+        <Background /> <Background />
+        <HeroSection signedIn={false} />
+      </main>
+      <Analytics />
+    </>
   );
 }
